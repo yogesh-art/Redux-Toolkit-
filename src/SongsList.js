@@ -1,19 +1,29 @@
-import { faker } from '@faker-js/faker';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 
 function SongsList(){
 
   const dispatch = useDispatch();
 
-  const handleClick = ()=>{
-    const randomSong = faker.music.songName();
-    console.log(randomSong);
-    dispatch({type:'data/addSong',payload:randomSong});
+  const songs = useSelector((state)=>{
+    return state.data.songs;
+  })
+
+  const handleDeleteClick = (index)=>{
+    dispatch({type:'data/removeSong',payload:index})
   }
 
   return(
     <div>
-      <button onClick={handleClick}>Click me to generate song</button>
+      {
+        songs.map((ele,index)=>{
+          return(
+            <div key={index}>
+              {ele}
+              <span onClick={()=>handleDeleteClick(index)}>X</span>
+            </div>
+          )
+        })
+      }
     </div>
   )
 }

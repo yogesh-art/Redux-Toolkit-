@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
 import { useDispatch } from 'react-redux';
 
-function ColorsList(){
+function Vehicles(){
 
   const dispatch = useDispatch();
 
@@ -17,4 +17,4 @@ function ColorsList(){
   )
 }
 
-export default ColorsList;
+export default Vehicles;

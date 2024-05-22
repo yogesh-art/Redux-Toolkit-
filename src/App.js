@@ -1,15 +1,15 @@
+import Songs from "./Songs";
+import Vehicles from "./Vehicles";
 import SongsList from "./SongsList";
-import SongsShow from "./SongsShow";
-import ColorsList from "./ColorsList";
-import ColorsShow from './ColorsShow';
+import VehiclesList from "./VehiclesList";
 
 function App(){
   return(
     <div>
+      <Songs />
       <SongsList />
-      <SongsShow />
-      <ColorsList />
-      <ColorsShow />
+      <Vehicles />
+      <VehiclesList />
     </div>
   )
 }

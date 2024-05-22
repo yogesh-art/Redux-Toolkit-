@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 
-function ColorsShow(){
+function VehiclesList(){
 
   const dispatch = useDispatch();
 
@@ -28,4 +28,4 @@ function ColorsShow(){
   )
 }
 
-export default ColorsShow;
+export default VehiclesList;
